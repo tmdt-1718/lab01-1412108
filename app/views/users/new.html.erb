@@ -4,10 +4,8 @@
 	<%= form_for @user do |form| %>
 	<%= render partial: '/users/form', object: form %>
 
-	<%= form.submit "Sign up", class: "btn btn-primary" %>
-	<div class="submit-field">
-		<%= form.submit %>
+	<div class="text-center">
+		<%= form.submit "Sign up", class: "btn btn-primary" %>	
 	</div>
-
 	<% end %>
 </div>
