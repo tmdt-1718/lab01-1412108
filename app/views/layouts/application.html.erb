@@ -25,24 +25,31 @@
 			</div>
 		</nav>
 		
-		<div class="row">
+		<div class="container row">
 			<% if signed_in? %> 
-			Signed in as: <%= current_user.email %> 
-			<%= button_to 'Sign out', sign_out_path, method: :delete %> 
-			<% else %> 
-			<%= link_to 'Sign in', sign_in_path %> 
-			<% end %> 
-
-			<div id="flash"> 
-				<% flash.each do |key, value| %> 
-				<div class="flash <%= key %>">
-					<%= value %>
-				</div> 
-				<% end %> 
-			</div>
+			<p>User: </p><%= current_user.email %>
+			<%= button_to 'Sign out', sign_out_path, method: :delete %>
+			<!-- <a class="btn btn-danger" href="<%= sign_out_path %>">Sign Out</a>  -->
+			<% end %>
 		</div>
 		
-		<%= yield %>	
+		<div class="container row">
+		<% if !signed_in? %>
+			<%= link_to 'Sign in', sign_in_path %> 
+		<% end %> 
+		</div>
+
+		<!-- <div id="flash"> 
+			<% flash.each do |key, value| %> 
+			<div class="flash <%= key %>">
+				<%= value %>
+			</div> 
+			<% end %> 
+		</div> -->
+
 	</div>
+
+	<%= yield %>	
+</div>
 </body>
 </html>
