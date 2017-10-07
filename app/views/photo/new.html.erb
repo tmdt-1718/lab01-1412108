@@ -1,0 +1,31 @@
+<div class="container col-sm-8">
+	<%= form_for :photo, html: {mutipart: true} do |form| %>
+	<div>
+		<h1 class="text-center">Upload photos</h1>
+
+		<p>Photos</p>
+		<%= form.file_field :image %>
+		<div class="form-group">
+			<label>Album</label>
+			<%= form.text_field :album, class: "form-control" %>
+		</div>
+
+		<div class="form-group">
+			<label>Title</label>
+			<%= form.text_field :title, class: "form-control" %>
+		</div>
+
+		<div class="form-group">
+			<label>Description</label>
+			<%= form.text_field :description, class: "form-control" %>
+		</div>
+
+		<div>
+			<%= form.text_field :uploader, type: 'hidden', :value => current_user.email %>
+		</div> 
+
+		<%= form.submit "Upload",  class: "actions btn btn-primary" %> 
+	</div>	
+	<% end %>	
+</div>
+</div>

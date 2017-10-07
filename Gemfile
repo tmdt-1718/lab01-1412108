@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'bundler'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use mysql as the database for Active Record
@@ -30,6 +32,8 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
 
 gem "clearance"
+
+gem 'paperclip', '~> 5.0.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

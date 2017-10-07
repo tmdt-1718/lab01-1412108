@@ -53,4 +53,8 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_option = { host: 'localhost:300' }
+
+  Paperclip.options[:command_path] = "/usr/bin/convert/"
+
+  config.reload_classes_only_on_change = false
 end

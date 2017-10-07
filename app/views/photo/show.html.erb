@@ -1,0 +1,10 @@
+<div class="container col-sm-8">
+	<h1>Photo <%= @photo.title %></h1>
+	<%= image_tag @photo.image.url(:medium) %>
+	<p>Uploader: <%= @photo.uploader %></p>
+	<p>Title: <%= @photo.title %></p>
+	<p>Description: <%= @photo.description %></p>
+	<p>Date: <%= @photo.updated_at %></p>
+	<p>Views: <%= @photo.view %></p>
+
+</div>
