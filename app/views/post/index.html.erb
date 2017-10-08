@@ -1,0 +1,30 @@
+<div>
+	<a class="btn btn-primary" href="./post/new">New</a>
+
+	<div class="single_post">
+		
+		
+	</div>
+	
+	<% @post.each do |post| %>
+	<div class="container row">
+		<div class="col-sm-6">
+			<div class="media">
+				<div class="media-left">
+					<a href="#">
+						<img class="media-object" src='<%= post.image.url(:thumb) %>' alt="...">
+					</a>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading"><%= post.title %></h4>
+					<p>Views: <%= post.view %></p>
+					<p><b><%= post.user %></b></p>
+					<p><%= post.content %></p>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<% end %>	
+	
+</div>
+

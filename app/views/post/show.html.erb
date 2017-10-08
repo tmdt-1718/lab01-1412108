@@ -1,0 +1,9 @@
+<div class="container col-sm-8">
+	<h1>Title <%= @post.title %></h1>
+	<%= image_tag @post.image.url(:thumb) %>
+	<p>User: <%= @post.user %></p>
+	<p>Title: <%= @post.title %></p>
+	<p>Content: <%= @post.content %></p>
+	<p>Date: <%= @post.updated_at %></p>
+	<p>Views: <%= @post.view %></p>
+</div>

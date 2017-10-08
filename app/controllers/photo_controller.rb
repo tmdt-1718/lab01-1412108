@@ -1,5 +1,5 @@
 class PhotoController < ApplicationController
-	def new_post
+	def new_photo
 		#render plain: params[:photo].inspect
 		@photo = Photo.new(photo_params)
 		@photo.save
